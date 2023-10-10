@@ -84,7 +84,7 @@ const stateAbbreviations = {
 
 function App() {
   const [USAData, setUSAData] = useState<IUSAData>();
-  const [selectedOption, setSelectedOption] = useState<IStateDataWithSelect>();
+  const [selectedOption, setSelectedOption] = useState<IStateDataWithSelect | null>();
 
   const fetchStateData = () => {
     fetch(
@@ -167,7 +167,6 @@ function App() {
     }
   }
 
-  //   TODO: Need to prevent components from jumping when bottom half is displayed or hidden
   return (
     <div id='main-content'>
       <div id='upper-content'>
